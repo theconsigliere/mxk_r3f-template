@@ -1,5 +1,5 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import Image from "next/image"
+import styles from "./page.module.css"
 
 export default function Home() {
   return (
@@ -17,9 +17,9 @@ export default function Home() {
           >
             By{" "}
             <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
+              src="/assets/mxk-logo.svg"
+              alt="Maxwell Kirwin Logo"
+              className={styles.mxkLogo}
               width={100}
               height={24}
               priority
@@ -91,5 +91,5 @@ export default function Home() {
         </a>
       </div>
     </main>
-  );
+  )
 }
