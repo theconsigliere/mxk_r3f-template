@@ -1,0 +1,13 @@
+.brandingSection {
+  display: block;
+  position: absolute;
+  z-index: 9;
+
+  &:is(*) {
+    color: white;
+  }
+}
+
+.mxkLogo {
+  /* filter: invert(1); */
+}
