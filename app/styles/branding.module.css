@@ -22,10 +22,13 @@
   vertical-align: baseline;
 }
 
-.sectionOne {
-  grid-area: 1 / 1 / 2 / 2;
-}
 .sectionGlobe {
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.sectionTwo {
   grid-area: 1 / 2 / 2 / 3;
 }
 .sectionMk {
@@ -56,7 +59,7 @@
 .mxkLogoSection {
   display: flex;
   align-items: center;
-  margin: 0.75rem 0;
+  margin: 0.5rem 0;
 }
 
 .mxkLogo {

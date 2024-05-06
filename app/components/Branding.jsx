@@ -1,5 +1,4 @@
 import Image from "next/image"
-
 import Globe from "./Globe"
 import { biggerFont } from "../layout"
 import styles from "../styles/branding.module.css"
@@ -7,11 +6,11 @@ import styles from "../styles/branding.module.css"
 export default function Branding({ number }) {
   return (
     <div className={styles.brandingSection}>
-      <div className={styles.sectionOne}></div>
-
       <div className={styles.sectionGlobe}>
         <Globe />
       </div>
+
+      <div className={styles.sectionTwo}></div>
 
       <div className={styles.sectionMk}>
         <a

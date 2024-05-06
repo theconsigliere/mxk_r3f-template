@@ -7,9 +7,8 @@ import { useGLTF, MeshTransmissionMaterial, Edges } from "@react-three/drei"
 import { useFrame, useThree } from "@react-three/fiber"
 import { useControls } from "leva"
 
-export function Model(props) {
+export function Model({ rotation }) {
   const { nodes, materials } = useGLTF("/assets/mxk-logo.glb")
-
   const { viewport } = useThree()
   const model = useRef()
 
@@ -26,19 +25,19 @@ export function Model(props) {
   )
 
   useFrame((state, delta) => {
-    model.current.rotation.y += 0.05 * delta
+    model.current.rotation.y += 0.05 * delta * rotation
   })
 
   return (
-    <group {...props} dispose={null} scale={viewport.width / 20} ref={model}>
+    <group dispose={null} scale={viewport.width / 20} ref={model}>
       {geometry.map((geometry, index) => (
         <mesh
           key={index}
           geometry={geometry}
           material={materials.Material}
-          position={[0.333, -0.734, 0.043]}
+          position={[0, 0, 0]}
         >
-          <Edges color="white" linewidth={2} />
+          <Edges color="white" linewidth={1} />
         </mesh>
       ))}
     </group>
