@@ -7,7 +7,7 @@ const Scene = dynamic(() => import("./components/Scene"), { ssr: false })
 export default function Home() {
   return (
     <main className={styles.main}>
-      <Branding />
+      <Branding number={1} />
       <Scene />
     </main>
   )

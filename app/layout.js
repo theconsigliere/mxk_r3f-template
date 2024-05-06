@@ -2,9 +2,10 @@ import { Manrope } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
 
-const biggerFont = localFont({
-  src: "../public/fonts/BiggerDisplay.woff2",
+export const biggerFont = localFont({
+  src: "../public/fonts/BiggerDisplay.woff",
   display: "swap",
+  family: "Bigger Display, sans-serif",
 })
 
 const manrope = Manrope({ subsets: ["latin"] })

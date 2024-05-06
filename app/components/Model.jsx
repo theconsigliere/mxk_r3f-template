@@ -8,26 +8,22 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { useControls } from "leva"
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/assets/mxk-logo.glb")
+  const { nodes, materials } = useGLTF("/assets/mxk-logo-v2.glb")
 
   const { viewport } = useThree()
   const model = useRef()
 
   const geometry = useMemo(
     () => [
-      nodes.Cube002.geometry,
-      nodes.Cube005.geometry,
-      nodes.Cube006.geometry,
-      nodes.Cube007.geometry,
-      nodes.Cube009.geometry,
-      nodes.Cube008.geometry,
+      nodes.M1.geometry,
+      nodes.M2.geometry,
+      nodes.M3.geometry,
+      nodes.K1.geometry,
+      nodes.K2.geometry,
+      nodes.K3.geometry,
     ],
     []
   )
-
-  useEffect(() => {
-    console.log(model)
-  }, [model])
 
   useFrame((state, delta) => {
     model.current.rotation.y += 0.05 * delta
