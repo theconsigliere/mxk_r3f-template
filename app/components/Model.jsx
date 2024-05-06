@@ -8,7 +8,7 @@ import { useFrame, useThree } from "@react-three/fiber"
 import { useControls } from "leva"
 
 export function Model(props) {
-  const { nodes, materials } = useGLTF("/assets/mxk-logo-v2.glb")
+  const { nodes, materials } = useGLTF("/assets/mxk-logo.glb")
 
   const { viewport } = useThree()
   const model = useRef()
