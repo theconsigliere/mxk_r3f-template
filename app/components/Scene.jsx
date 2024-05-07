@@ -12,7 +12,7 @@ export default function Scene() {
   })
 
   return (
-    <Canvas style={{ backgroundColor: "#141414" }}>
+    <Canvas dpr={[1, 2]} style={{ backgroundColor: "#141414" }}>
       <Perf position={"bottom-left"} />
       {/* <directionalLight position={[0, 3, -2]} intensity={3} /> */}
       {/* <Environment preset="night" /> */}
