@@ -1,6 +1,7 @@
 "use client"
 import { Canvas } from "@react-three/fiber"
 import { Model } from "./Model"
+import { Perf } from "r3f-perf"
 import { Environment, OrbitControls } from "@react-three/drei"
 import { useControls } from "leva"
 
@@ -12,8 +13,9 @@ export default function Scene() {
 
   return (
     <Canvas style={{ backgroundColor: "#141414" }}>
+      <Perf position={"bottom-left"} />
       {/* <directionalLight position={[0, 3, -2]} intensity={3} /> */}
-      <Environment preset="city" />
+      {/* <Environment preset="night" /> */}
       <OrbitControls makeDefault />
       <Model {...modelProps} />
       <gridHelper

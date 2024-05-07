@@ -35,8 +35,10 @@ export function Model({ rotation }) {
           key={index}
           geometry={geometry}
           material={materials.Material}
-          position={[0, 0, 0]}
+          position={[0, 1, 0]}
         >
+          {/* <MeshTransmissionMaterial /> */}
+          {/* <meshBasicMaterial color="red" /> */}
           <Edges color="white" linewidth={1} />
         </mesh>
       ))}
