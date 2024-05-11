@@ -8,7 +8,6 @@ import { useControls } from "leva"
 export default function Scene() {
   const modelProps = useControls("Model Props", {
     rotation: { value: 1, min: 0.0, max: 10 },
-    // amplitude: { value: 0.1, min: 0, max: 1 },
   })
 
   return (
